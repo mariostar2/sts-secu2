@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org" 
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>My Page</h1>
+<hr>
+<p sec:authentication="name">로그인 사용자(username)</p>
+<p sec:authentication="principal">인증된 사용자 객체</p>
+<p sec:authentication="authorities">사용자 권한</p>
+<p sec:authentication="principal.username">username</p>
+<p sec:authentication="principal.name">name</p>
+<p sec:authentication="principal.role">role</p>
+<hr>
+<a href="/member/mem01">mem01 페이지로 이동....</a><br>
+<a href="/admin/dashboard">관리자 dashboard 페이지로 이동....</a><br>
+</body>
+</html>
